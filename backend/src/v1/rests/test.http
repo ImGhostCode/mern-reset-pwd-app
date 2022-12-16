@@ -1,0 +1,51 @@
+@urlDev=http://localhost:3051
+
+###check Status
+GET {{urlDev}}/
+
+###
+POST {{urlDev}}/register
+Content-Type: application/json
+
+{
+    "name": "test1",
+    "email": "test1@gmail.com",
+    "password": "testpwd1",
+    "cpassword": "testpwd1"
+}
+
+###
+POST {{urlDev}}/login
+Content-Type: application/json
+
+{
+    "email": "test1@gmail.com",
+    "password": "newpass123"
+}
+
+###
+GET {{urlDev}}/validuser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzk1MjJmNWM5NmU3NTZkNTQxYjYxMjQiLCJpYXQiOjE2NzA3MjAwODMsImV4cCI6MTY3MDcyMDExM30.Qc6AWH02oAEeDr9TP3QKnMqS5iqhiogERegNWGJDmhY
+
+###
+GET {{urlDev}}/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzk1MjJmNWM5NmU3NTZkNTQxYjYxMjQiLCJpYXQiOjE2NzA3MjY4MjMsImV4cCI6MTY3MDcyNjg4M30.X2v2OwVFoRQBS6kPH6RSuRakMbUxFzjIZlnh_zPCM18
+
+###
+POST {{urlDev}}/sendresetlink
+Content-Type: application/json
+
+{
+    "email": "test1@gmail.com"
+}
+
+###
+GET {{urlDev}}/forgotpassword/639522f5c96e756d541b6124/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzk1MjJmNWM5NmU3NTZkNTQxYjYxMjQiLCJpYXQiOjE2NzA3MjU2MzMsImV4cCI6MTY3MDcyNTc1M30.u2HdSLuNDKhOVQ90S1KVbf5ZUwnBlpuZ0OmMDAk-nKo
+
+###
+POST {{urlDev}}/reset/639522f5c96e756d541b6124/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzk1MjJmNWM5NmU3NTZkNTQxYjYxMjQiLCJpYXQiOjE2NzA3MjY3ODcsImV4cCI6MTY3MDcyNjkwN30.mrvx8grR50cMxNspBrVOSPUoMesVT5PvNu50PDmMU18
+Content-Type: application/json
+
+{
+    "password": "newpass123"
+}

@@ -1,0 +1,21 @@
+header {
+    height: 80px;
+    box-shadow: 0 0 10px -7px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+    display: flex;
+    max-width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+nav h1 {
+    color: #2d3748;
+}
+
+.avt-default {
+    cursor: pointer;
+}
